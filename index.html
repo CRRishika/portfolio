@@ -1,0 +1,1128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DEX</title>
+	<style>
+		*{
+			margin: 0px;
+		}
+	body
+		{
+			background-image: url("bgdd.jpg");
+			background-size: cover;
+		}
+		.logg {
+        position: absolute; 
+			margin-top: 5px;
+		margin-left: 70px;	
+    }
+
+		.logg img
+		{
+			width: 168px;
+			height: 80px;
+		}
+		.navbar
+		{
+			position: absolute;
+			margin-top: 45px;
+			margin-left: 680px;}
+		
+/*
+		.navbar a
+		{
+			padding-left: 45px;
+			text-decoration: none;
+			color: white;
+			font-size: 17px;
+			font-family: "Santello Regular";
+			position: fixed;
+		}
+		.navbar a:hover
+		{
+			text-decoration:inherit;
+			color: #bf1e2e;
+		}
+*/
+		
+		
+		ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font: bold 1.5rem sans-serif;
+  text-transform: uppercase;
+  color: grey;
+}
+ul li {
+  padding: 0 .5em .25em;
+	padding-left: 45px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: .3s;
+	font-size: 20px;
+	font-family:  "Santello Regular";
+}
+ul li:hover {
+  color: #bf1e2e;
+
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0; /* 3px = the thickness */
+  background: #bf1e2e; /* the color */
+  scale: 0 1;
+  transition: .3s, translate 0s .3s;
+}
+ul:hover li:before {
+  scale: 1;
+}
+ul li:hover:before {
+  translate: 0;
+  transition: .3s;
+}
+ul:hover li:has(~ li:hover):before {
+  translate: 100% 0;
+  transition: .2s .2s,scale 0s .4s;
+}
+ul:hover li:hover ~ li:before {
+  translate: -100% 0;
+  transition: .2s .2s,scale 0s .4s;
+}
+		
+		
+		.navbar a
+		{
+			text-decoration: none;
+			color: grey;
+		}
+		
+		.title
+		{
+			position: absolute;
+			margin-top: 350px;
+			margin-left: 150px;
+			width: 512px;
+			text-align: left;
+		}
+		.title h4
+		{
+			font-family: Glastone;
+			font-size: 25px;
+			color: #bf1e2e;
+/*			text-shadow:1px 1px 2px white; */
+		}
+		.title p
+		{
+			font-family: Gotham;
+			font-size:45px; 
+			text-shadow: 1px 1.5px 1px black;
+			color: white;
+		}
+		.bg
+		{
+			position: absolute;
+			margin-top: 800px;
+		}
+		.bg img
+		{
+			width: 1470px;
+			height: 720px;
+		}
+		.title3
+		{
+			position: absolute;
+			margin-top: 840px;
+			margin-left: 590px;
+		}
+		.title3 h1 
+		{
+			color: #BF1E2E;
+			font-size: 45px;
+			font-family: "Jost*";
+/*			text-shadow: 1px 1.5px 2px grey;*/
+			
+		}
+/*
+		.title3 a
+		{
+			text-decoration: none;
+			color: white;
+		}
+*/
+		.title2
+		{
+			position: absolute;
+			margin-top: 950px;
+			margin-left: 800px;
+		}
+		.title2 h3
+		{
+			color: #bf1e2e;
+			font-size: 30px;
+			font-family:   "Santello Regular";
+			
+		}
+		.title2 h5
+		{
+			color: #767676;
+			font-size: 19px;
+			font-family:   "Santello Regular";
+		}
+		.title2 p
+		{
+			color: white;
+			text-align: left;
+			font-size: 29px;
+			margin-right: 80px;
+			font-family: "Jost*";
+		}
+
+/*
+		button
+		{
+			position: absolute;
+			width: 100px;
+			height: 50px;
+			margin-top: 1400px;
+			margin-left: 800px;
+			font-size: 15px;
+			font-family:  "Santello Regular";
+			text-decoration: none;
+			border-radius: 8px;
+		}
+		
+		button:hover {
+  background-color:#bf1e2e;
+		}
+*/
+		
+/*
+		button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+*/
+		
+	.title5
+		{
+			position: absolute;
+			margin-top:1630px;
+
+			margin-left: 650px;
+		}
+		.title5 h1
+		{
+			color: #bf1e2e;
+			font-size: 50px;
+			font-family:   "Santello Regular";
+		}
+
+.ag-format-container {
+	position: absolute;
+	background-color: black;
+  width: 1142px;
+  margin-top: 1720px;
+	margin-left: 190px;
+	
+}
+
+
+.ag-offer-block {
+  padding: 50px 0 90px
+}
+.ag-offer_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+.ag-offer_item {
+  width: 33.33%;
+
+  overflow: hidden;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  position: relative;
+}
+.ag-offer_item:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
+  border-top: 1px solid #c1c1c1;
+}
+.ag-offer_item:not(:nth-child(3n)) {
+  border-right: 1px solid #c1c1c1;
+}
+.ag-offer_item:nth-child(1) .ag-offer_hidden-item {
+  background-color: #e45f0a;
+}
+.ag-offer_item:nth-child(2) .ag-offer_hidden-item {
+  background-color: #ffca00;
+}
+.ag-offer_item:nth-child(3) .ag-offer_hidden-item {
+  background-color: #15c1c1;
+}
+.ag-offer_item:nth-child(4) .ag-offer_hidden-item {
+  background-color: #008000;
+}
+.ag-offer_item:nth-child(5) .ag-offer_hidden-item {
+  background-color: #8c7b00;
+}
+.ag-offer_item:nth-child(6) .ag-offer_hidden-item {
+  background-color: #000080;
+}
+.ag-offer_item:hover .ag-offer_visible-item {
+  opacity: 0;
+
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.ag-offer_visible-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  padding: 35px 40px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: .4s .3s;
+  -moz-transition: .4s .3s;
+  -o-transition: .4s .3s;
+  transition: .4s .3s;
+}
+.ag-offer_img {
+  height: 64px;
+  width: 64px;
+  margin: 0 15px 0 0;
+	
+}
+.ag-offer_title {
+  font-size: 22px;
+	font-family: "Santello Regular";
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ag-offer_hidden-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  padding: 30px;
+
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  -webkit-transform: rotate(180deg) scale(0);
+  -moz-transform: rotate(180deg) scale(0);
+  -ms-transform: rotate(180deg) scale(0);
+  -o-transform: rotate(180deg) scale(0);
+  transform: rotate(180deg) scale(0);
+
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+.ag-offer_item:hover .ag-offer_hidden-item {
+  opacity: 1;
+
+  -webkit-transform: rotate(0deg) scale(1);
+  -moz-transform: rotate(0deg) scale(1);
+  -ms-transform: rotate(0deg) scale(1);
+  -o-transform: rotate(0deg) scale(1);
+  transform: rotate(0deg) scale(1);
+
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  -o-transition-delay: .3s;
+  transition-delay: .3s;
+}
+.ag-offer_text {
+  max-width: 100%;
+
+  opacity: 0;
+
+  font-size: 20px;
+	font-family: "Jost*";
+  color: #FFF;
+
+  -webkit-transition: .3s .5s;
+  -moz-transition: .3s .5s;
+  -o-transition: .3s .5s;
+  transition: .3s .5s;
+}
+.ag-offer_item:hover .ag-offer_text {
+  opacity: 1;
+}
+.ag-offer_btn {
+  display: block;
+  padding: 10px 20px;
+  border: 2px solid #FFF;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  white-space: nowrap;
+  font-size: 25px;
+  color: #FFF;
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.ag-offer_btn:hover {
+  border: 2px solid #0000d1;
+  background-color: #FFF;
+
+  text-decoration: none;
+  color: #0000d1;
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+
+  .ag-offer_item {
+    width: 100%;
+    margin:  0 0 30px;
+    border: 0 none !important;
+    border-bottom: 1px solid #c1c1c1 !important;
+  }
+  .ag-offer_visible-item {
+    padding: 0 20px 30px;
+
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .ag-offer_item:hover .ag-offer_visible-item {
+    opacity: 1;
+
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  .ag-offer_hidden-item {
+    padding: 0 20px 20px;
+
+    opacity: 1;
+
+    position: static;
+
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  .ag-offer_item:nth-child(1) .ag-offer_hidden-item,
+  .ag-offer_item:nth-child(2) .ag-offer_hidden-item,
+  .ag-offer_item:nth-child(3) .ag-offer_hidden-item,
+  .ag-offer_item:nth-child(4) .ag-offer_hidden-item,
+  .ag-offer_item:nth-child(5) .ag-offer_hidden-item,
+  .ag-offer_item:nth-child(6) .ag-offer_hidden-item {
+    background-color: transparent;
+  }
+  .ag-offer_item:hover .ag-offer_text {
+    opacity: 1;
+  }
+  .ag-offer_title {
+    font-weight: bold;
+  }
+  .ag-offer_text {
+    opacity: 1;
+
+    font-size: 10px;
+    color: #000;
+  }
+  .ag-offer_btn {
+    border: 2px solid #0000d1;
+    background-color: #000080;
+
+    position: static;
+
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+
+}
+
+@media only screen and (max-width: 479px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .ag-format-container {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 980px) and (max-width: 1161px) {
+  .ag-format-container {
+    width: 960px;
+  }
+
+}
+		
+		.reactangle
+		{
+			position: absolute;
+			background-color: black;
+			width: 1470px;
+			height: 2200px;
+			margin-top: 2000px;
+			
+		}
+		
+		.title6
+		{
+			position: absolute;
+			margin-top:2075px;
+
+			margin-left: 610px;
+		}
+		.title6  h1
+		{
+			color: #bf1e2e;
+			font-size: 50px;
+			font-family:   "Santello Regular";
+		}
+		
+		
+		
+		
+		
+		
+		@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.7;
+	color: #fff;
+	background-color: #1f2029;
+  margin: 0;
+  padding: 0;
+  overflow-x: none;
+}
+p{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #fff;
+  margin: 0;
+}
+.section-fluid-main{
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  padding-right: 15px;
+  padding-left: 15px;
+	margin-left: 220px;
+	margin-top: 2100px;
+  max-width: 1140px;
+  padding: 100px 0;
+}
+.section-row{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.section-row:hover .section-col{
+  opacity: 0.1;
+}
+.section-col{
+  position: relative;
+  width: 100%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  transition: opacity 250ms linear;
+}
+.section-row .section-col:hover{
+  opacity: 1;
+}
+.section{
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 15px;
+}
+.section-in{
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.section-in img{
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 250ms linear;
+}
+.section-col:hover .section-in img{
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.hover-text{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: none;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  mix-blend-mode: difference;
+}
+.hover-text h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 8vw;
+  line-height: 1;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 250ms linear, opacity 250ms ease;
+}
+.section-col:hover + .hover-text h2{
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.logo {
+	position: fixed;
+	top: 25px;
+	left: 25px;
+	display: block;
+	z-index: 1000;
+	transition: all 250ms linear;
+}
+.logo img {
+	height: 26px;
+	width: auto;
+	display: block;
+	transition: filter 250ms 700ms linear;
+}
+
+
+@media (max-width: 767px) {
+  .section-col{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .hover-text h2{
+    font-size: 12vw;
+  }
+}
+		
+/*
+		.rectangle2
+		{
+			background-image: url("rec.jpg");
+			background-size: cover;
+			width: 1470px;
+			height: 520px;
+			position: absolute;
+			margin-top: 4200px;
+			
+		}
+*/
+	
+		
+		
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background: #333;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 100vh;
+}
+*/
+
+.footer {
+  position: absolute;
+	margin-top: 4230px;
+  width: 100%;
+  background: #bf1e2e;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+	font-family:"Jost*";
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 500;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+	</style>
+</head>
+
+<body>
+	<div class="logg"><img src="dexlo.png"></div>
+		
+	<div class="navbar">
+		<ul>
+  <li>HOME</li>
+  <li><a href="#abt">ABOUT ME</a></li>
+			<li><a href="#sk">SKILLS</a></li>
+			<li><a href="#por">PORTFOLIO</a></li>
+  <li>CONTACT</li>
+</ul>
+	</div>
+	
+	<div class="title"><h4>Welcome to Design Dexterity!</h4>
+	<p>"Transforming visions into visually captivating realities through innovative graphic design."</p>
+	</div>
+	
+	<div class="bg"><img src="bg2dd.jpg"></div>
+	
+	<div class="title3" id="abt"><h1>ABOUT ME</h1></div>
+	
+	<div class="title2"><h3>Rishika Reghu</h3><br>
+	<h5>Graphic Designer -------</h5><br><br><br>
+	<p>Hello! I’m Rishika, a creative and dedicated<br>graphic designer.<br>My passion lies in transforming ideas into<br>visually captivating designs that engage and <br>inspire audiences.</p></div>
+<!--	<button>Hire Me</button>-->
+
+		
+	<div class="title5" id="sk"><h1>SKILLS</h1></div>
+	
+	<div class="ag-offer-block">
+  <div class="ag-format-container">
+    <ul class="ag-offer_list">
+      <li class="ag-offer_item">
+        <div class="ag-offer_visible-item">
+          <div class="ag-offer_img-box">
+            <img src="ps.png" class="ag-offer_img" alt="" />
+          </div>
+          <div class="ag-offer_title">
+           Photoshop
+          </div>
+        </div>
+        <div class="ag-offer_hidden-item">
+          <p class="ag-offer_text">
+            Photoshop is a versatile and powerful tool for creating and editing digital images.
+          </p>
+        </div>
+      </li>
+      <li class="ag-offer_item">
+        <div class="ag-offer_visible-item">
+          <div class="ag-offer_img-box">
+            <img src="ai.png" class="ag-offer_img" alt="" />
+          </div>
+          <div class="ag-offer_title">
+            illustrator
+          </div>
+        </div>
+        <div class="ag-offer_hidden-item">
+          <p class="ag-offer_text">
+            A powerful vector graphics software used by designers and artists to create a wide range of digital artwork.
+          </p>
+        </div>
+      </li>
+      <li class="ag-offer_item">
+        <div class="ag-offer_visible-item">
+          <div class="ag-offer_img-box">
+            <img src="corel.png" class="ag-offer_img" alt="" />
+          </div>
+          <div class="ag-offer_title">
+           Corel Draw
+          </div>
+        </div>
+        <div class="ag-offer_hidden-item">
+          <p class="ag-offer_text">
+            CorelDRAW is a versatile vector graphics editor widely used for a variety of design tasks.
+          </p>
+        </div>
+      </li>
+      <li class="ag-offer_item">
+        <div class="ag-offer_visible-item">
+          <div class="ag-offer_img-box">
+            <img src="ui.png" class="ag-offer_img" alt="" />
+          </div>
+          <div class="ag-offer_title">
+            UI/UX Design
+          </div>
+        </div>
+        <div class="ag-offer_hidden-item">
+          <p class="ag-offer_text">
+            UI/UX design focuses on creating user-friendly and aesthetically pleasing digital experiences.
+          </p>
+        </div>
+      </li>
+      <li class="ag-offer_item">
+        <div class="ag-offer_visible-item">
+          <div class="ag-offer_img-box">
+            <img src="xd.png" class="ag-offer_img" alt="" />
+          </div>
+          <div class="ag-offer_title">
+            XD
+          </div>
+        </div>
+        <div class="ag-offer_hidden-item">
+          <p class="ag-offer_text">
+           Adobe XD enables the creation of various digital designs and interactive experiences.
+          </p>
+        </div>
+      </li>
+      <li class="ag-offer_item">
+        <div class="ag-offer_visible-item">
+          <div class="ag-offer_img-box">
+            <img src="ht.png" class="ag-offer_img" alt="" />
+          </div>
+          <div class="ag-offer_title">HTML/CSS</div>
+        </div>
+		  
+		  <div class="ag-offer_hidden-item">
+          <p class="ag-offer_text">
+            HTML and CSS are fundamental technologies for building and designing web pages.
+          </p>
+        </div>
+<!--
+        <div class="ag-offer_hidden-item">
+          <a href="#" class="ag-offer_btn">
+            Dapibus viverra
+          </a>
+        </div>
+-->
+      </li>
+    </ul>
+  </div>
+</div>
+	
+	<div class="reactangle"></div>
+	<div class="title6" id="por"><h1>PORTFOLIO</h1></div>
+	
+	<div class="section-fluid-main">
+		<div class="section-row">
+			<div class="section-col">
+				<div class="section">
+					<div class="section-in">
+						<img src="32.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="hover-text">
+				<h2>Colorize</h2>
+			</div>
+			<div class="section-col">
+				<div class="section">
+					<div class="section-in">
+						<img src="brochure design.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="hover-text">
+				<h2>Brochure</h2>
+			</div>
+			<div class="section-col">
+				<div class="section">
+					<div class="section-in">
+						<img src="piyush mom visit.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="hover-text">
+				<h2>Visiting card</h2>
+			</div>
+			<div class="section-col">
+				<div class="section">
+					<div class="section-in">
+						<img src="flyer 3 mock.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="hover-text">
+				<h2>Flyer Mockup</h2>
+			</div>
+			<div class="section-col">
+				<div class="section">
+					<div class="section-in">
+						<img src="school invi.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="hover-text">
+				<h2>Invitation card</h2>
+			</div>
+			<div class="section-col">
+				<div class="section">
+					<div class="section-in">
+						<img src="wedd.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="hover-text">
+				<h2>Wedding card</h2>
+			</div>
+		</div>
+
+		<a href="https://front.codes/" class="logo" target="_blank">
+			
+		</a>	
+	</div>
+	
+	
+<!--		<div class="rectangle2"></div>-->
+	
+	<footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+<!--      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>-->
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;2021 Rishika Reghu | All Rights Reserved</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!--
+	(function ($) {
+  $(function () {
+
+    
+
+  });
+})(jQuery);
+	
+-->
+	
+	
+</body>
+</html>
